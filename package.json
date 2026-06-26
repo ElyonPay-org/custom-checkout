@@ -1,0 +1,70 @@
+{
+  "name": "@elyonpay/custom-checkout",
+  "version": "1.0.0",
+  "description": "ElyonPay Custom Checkout SDK — React & Vue integration for direct payments (Mobile Money, Visa, Mastercard).",
+  "author": "ElyonPay",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./react": {
+      "types": "./dist/react/index.d.ts",
+      "import": "./dist/react/index.js",
+      "require": "./dist/react/index.cjs"
+    },
+    "./vue": {
+      "types": "./dist/vue/index.d.ts",
+      "import": "./dist/vue/index.js",
+      "require": "./dist/vue/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.0",
+    "vue": ">=3.3.0"
+  },
+  "peerDependenciesMeta": {
+    "react": { "optional": true },
+    "vue": { "optional": true }
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "react": "^18.2.0",
+    "typescript": "^5.4.0",
+    "tsup": "^8.0.0",
+    "vue": "^3.4.0"
+  },
+  "keywords": [
+    "elyonpay",
+    "payment",
+    "checkout",
+    "mobile-money",
+    "mtn",
+    "orange-money",
+    "wave",
+    "visa",
+    "mastercard",
+    "xaf",
+    "xof",
+    "react",
+    "vue",
+    "sdk"
+  ]
+}
